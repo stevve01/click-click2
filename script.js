@@ -4,7 +4,7 @@ let clickMultiplier = parseInt(localStorage.getItem('clickMultiplier')) || 1;
 let level = parseInt(localStorage.getItem('level')) || 1;
 let goal = level * 100;
 let autoClickerActive = localStorage.getItem('autoClickerActive') === 'true';
-let superClickActive = localStorage.getItem('superClickActive') === 'true';
+let fastClickerActive = localStorage.getItem('fastClickerActive') === 'true';
 let totalClicks = parseInt(localStorage.getItem('totalClicks')) || 0;
 let playTime = 0;
 
@@ -18,8 +18,10 @@ function updateScore() {
     localStorage.setItem('totalClicks', totalClicks);
 }
 
-// Клик на кнопку
+// Добавляем звук клика
+const clickSound = document.getElementById('click-sound');
 document.getElementById('click-btn').addEventListener('click', function() {
+    clickSound.play();
     score += clickMultiplier;
     totalClicks++;
     updateScore();
@@ -49,6 +51,24 @@ document.getElementById('auto-clicker').addEventListener('click', function() {
     }
 });
 
+// Покупка ускоренного авто-кликера
+document.getElementById('fast-clicker').addEventListener('click', function() {
+    if (score >= 500 && !fastClickerActive) {
+        score -= 500;
+        updateScore();
+        fastClickerActive = true;
+        localStorage.setItem('fastClickerActive', 'true');
+        startFastClicker();
+        this.innerText = 'Fast Clicker Active';
+        this.disabled = true;
+    }
+});
+
+// Воспроизведение фоновой музыки
+const backgroundMusic = document.getElementById('background-music');
+backgroundMusic.volume = 0.2;
+backgroundMusic.play();
+
 // Модальное окно для поздравлений
 function openModal(message) {
     const modal = document.getElementById('modal');
@@ -67,7 +87,16 @@ function startAutoClicker() {
         score++;
         updateScore();
         checkLevelUp();
-    }, 1000);
+    }, 1000); // Один клик каждую секунду
+}
+
+// Ускоренный авто-кликер
+function startFastClicker() {
+    setInterval(function() {
+        score += 2;
+        updateScore();
+        checkLevelUp();
+    }, 500); // Два клика каждую полсекунды
 }
 
 // Обновление статистики
@@ -82,3 +111,4 @@ function updateStats() {
 updateScore();
 updateStats();
 if (autoClickerActive) startAutoClicker();
+if (fastClickerActive) startFastClicker();
