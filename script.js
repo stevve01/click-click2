@@ -28,7 +28,7 @@ document.getElementById('click-btn').addEventListener('click', function() {
     checkLevelUp();
 });
 
-// Открытие магазина
+// Открытие и закрытие магазина
 const shopBtn = document.getElementById('shop-btn');
 const shopModal = document.getElementById('shop-modal');
 const closeShop = document.querySelector('.close');
@@ -37,7 +37,6 @@ shopBtn.addEventListener('click', function() {
     shopModal.style.display = 'flex';
 });
 
-// Закрытие магазина
 closeShop.addEventListener('click', function() {
     shopModal.style.display = 'none';
 });
