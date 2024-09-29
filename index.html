@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ClickerGame</div>
+            <ul class="nav-links">
+                <li><a href="#game">Game</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главная секция игры -->
+    <section id="game" class="game-section">
+        <h1>Ultimate Clicker Game</h1>
+        <div id="level">Level: 1</div>
+        <div id="goal">Goal: 100 points</div>
+        <div id="score">Score: 0</div>
+        <button id="click-btn" class="game-btn">Click me!</button>
+
+        <div class="shop">
+            <h2>Shop</h2>
+            <button id="auto-clicker" class="shop-btn">Buy Auto-Clicker (Cost: 50)</button>
+            <button id="double-click" class="shop-btn">Buy Double Click (Cost: 100)</button>
+            <button id="super-click" class="shop-btn">Buy Super Click (Cost: 250)</button>
+            <button id="reset-game" class="shop-btn danger-btn">Reset Game</button>
+        </div>
+    </section>
+
+    <!-- Секция с таблицей лидеров -->
+    <section id="leaderboard" class="leaderboard-section">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list">
+            <!-- Тут будет выводиться список лидеров -->
+        </ul>
+    </section>
+
+    <!-- Секция со статистикой игрока -->
+    <section id="stats" class="stats-section">
+        <h2>Your Stats</h2>
+        <p id="total-clicks">Total Clicks: 0</p>
+        <p id="play-time">Time Played: 0 seconds</p>
+    </section>
+
+    <!-- Секция контактов -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="#" method="post" class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Модальное окно для уведомлений -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-text">You've reached the next level!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
