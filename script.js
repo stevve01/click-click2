@@ -67,7 +67,7 @@ function startAutoClicker() {
         score++;
         updateScore();
         checkLevelUp();
-    }, 1000); // Один клик каждую секунду
+    }, 1000);
 }
 
 // Обновление статистики
