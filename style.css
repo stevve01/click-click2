@@ -27,28 +27,6 @@ header {
     font-weight: bold;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #f0a500;
-}
-
 /* HUD (интерфейс) */
 .hud {
     display: flex;
@@ -73,52 +51,34 @@ header {
     text-align: center;
 }
 
-h1, h2 {
+h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-#score, #level, #goal, #total-clicks, #play-time {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Кнопка с изображением (монета) */
-.game-btn {
-    width: 150px;
-    height: 150px;
+/* Центрирование кнопок "Клик" и "Магазин" */
+.centered {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px auto;
+}
+
+#click-btn img, #shop-btn img {
+    width: 150px;
+    height: auto;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
-.game-btn:hover {
+#click-btn:hover img, #shop-btn:hover img {
     transform: scale(1.1);
 }
 
-.click-img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-/* Кнопка магазина с изображением */
-#shop-btn {
-    margin-top: 30px;
-    cursor: pointer;
-}
-
+/* Кнопка магазина */
 .shop-img {
     width: 200px;
     height: auto;
-    transition: transform 0.2s ease;
-}
-
-#shop-btn:hover .shop-img {
-    transform: scale(1.1);
 }
 
 /* Модальное окно магазина */
@@ -175,4 +135,23 @@ h1, h2 {
 
 .close:hover {
     color: red;
+}
+
+/* Адаптация для телефонов */
+@media (max-width: 768px) {
+    .hud-item {
+        font-size: 1.2rem;
+    }
+
+    #click-btn img, #shop-btn img {
+        width: 120px;
+    }
+
+    .shop-img {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
