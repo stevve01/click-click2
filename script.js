@@ -4,18 +4,15 @@ let clickMultiplier = parseInt(localStorage.getItem('clickMultiplier')) || 1;
 let level = parseInt(localStorage.getItem('level')) || 1;
 let goal = level * 100;
 let autoClickerActive = localStorage.getItem('autoClickerActive') === 'true';
-let fastClickerActive = localStorage.getItem('fastClickerActive') === 'true';
 let totalClicks = parseInt(localStorage.getItem('totalClicks')) || 0;
-let playTime = 0;
 
-// Обновление счёта, уровня и целей
+// Обновление счёта
 function updateScore() {
     document.getElementById('score').innerText = `Score: ${score}`;
     document.getElementById('level').innerText = `Level: ${level}`;
     document.getElementById('goal').innerText = `Goal: ${goal} points`;
     localStorage.setItem('score', score);
     localStorage.setItem('level', level);
-    localStorage.setItem('totalClicks', totalClicks);
 }
 
 // Добавляем звук клика
@@ -46,24 +43,6 @@ function checkLevelUp() {
     if (score >= goal) {
         level++;
         goal = level * 100;
-        openModal(`Congrats! You've reached level ${level}`);
         updateScore();
     }
 }
-
-// Воспроизведение фоновой музыки
-const backgroundMusic = document.getElementById('background-music');
-backgroundMusic.volume = 0.2;
-backgroundMusic.play();
-
-// Модальное окно для поздравлений
-function openModal(message) {
-    const modal = document.getElementById('modal');
-    document.getElementById('modal-text').innerText = message;
-    modal.style.display = 'flex';
-}
-
-// Закрытие модального окна
-document.querySelector('.close').addEventListener('click', function() {
-    document.getElementById('modal').style.display = 'none';
-});
