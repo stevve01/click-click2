@@ -31,18 +31,39 @@
 
         <!-- Заменим кнопку на изображение -->
         <div id="click-btn" class="game-btn">
-            <img src="https://image.shutterstock.com/image-vector/gold-coin-dollar-sign-isolated-260nw-1462432254.jpg" alt="Click Image" class="click-img">
+            <img src="https://w7.pngwing.com/pngs/256/527/png-transparent-game-coin-thumbnail.png" alt="Click Image" class="click-img">
         </div>
 
-        <div class="shop">
-            <h2>Shop</h2>
-            <button id="auto-clicker" class="shop-btn">Auto-Clicker (Cost: 50)</button>
-            <button id="double-click" class="shop-btn">Double Click (Cost: 100)</button>
-            <button id="super-click" class="shop-btn">Super Click (Cost: 250)</button>
-            <button id="fast-clicker" class="shop-btn">Fast Clicker (Cost: 500)</button>
-            <button id="reset-game" class="shop-btn danger-btn">Reset Game</button>
+        <!-- Кнопка магазина -->
+        <div id="shop-btn">
+            <img src="https://tl.vhv.rs/dpng/s/471-4713538_red-buy-now-buttons-hd-png-download.png" alt="Shop Button" class="shop-img">
         </div>
     </section>
+
+    <!-- Окно магазина -->
+    <div id="shop-modal" class="modal">
+        <div class="modal-content shop-content">
+            <span class="close">&times;</span>
+            <h2>Shop</h2>
+            <div class="shop-items">
+                <div class="shop-item">Improvement 1 (Cost: 100)</div>
+                <div class="shop-item">Improvement 2 (Cost: 150)</div>
+                <div class="shop-item">Improvement 3 (Cost: 200)</div>
+                <div class="shop-item">Improvement 4 (Cost: 250)</div>
+                <div class="shop-item">Improvement 5 (Cost: 300)</div>
+                <div class="shop-item">Improvement 6 (Cost: 350)</div>
+                <div class="shop-item">Improvement 7 (Cost: 400)</div>
+                <div class="shop-item">Improvement 8 (Cost: 450)</div>
+                <div class="shop-item">Improvement 9 (Cost: 500)</div>
+                <div class="shop-item">Improvement 10 (Cost: 550)</div>
+                <div class="shop-item">Improvement 11 (Cost: 600)</div>
+                <div class="shop-item">Improvement 12 (Cost: 650)</div>
+                <div class="shop-item">Improvement 13 (Cost: 700)</div>
+                <div class="shop-item">Improvement 14 (Cost: 750)</div>
+                <div class="shop-item">Improvement 15 (Cost: 800)</div>
+            </div>
+        </div>
+    </div>
 
     <!-- Аудио для клика и фоновой музыки -->
     <audio id="click-sound" src="https://freesound.org/people/cdrk/sounds/502334/download/502334__cdrk__button-click.wav" preload="auto"></audio>
@@ -51,3 +72,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
