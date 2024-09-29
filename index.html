@@ -11,31 +11,27 @@
     <header>
         <nav>
             <div class="logo">ClickerGame</div>
-            <ul class="nav-links">
-                <li><a href="#game">Game</a></li>
-                <li><a href="#leaderboard">Leaderboard</a></li>
-                <li><a href="#stats">Stats</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
     <!-- Главная секция игры -->
     <section id="game" class="game-section">
         <h1>Ultimate Clicker Game</h1>
+
+        <!-- HUD с уровнями и очками -->
         <div id="hud" class="hud">
             <div id="level" class="hud-item">Level: 1</div>
             <div id="goal" class="hud-item">Goal: 100 points</div>
             <div id="score" class="hud-item">Score: 0</div>
         </div>
 
-        <!-- Заменим кнопку на изображение -->
-        <div id="click-btn" class="game-btn">
+        <!-- Кнопка клика (монета) по центру -->
+        <div id="click-btn" class="centered">
             <img src="https://w7.pngwing.com/pngs/256/527/png-transparent-game-coin-thumbnail.png" alt="Click Image" class="click-img">
         </div>
 
-        <!-- Кнопка магазина -->
-        <div id="shop-btn">
+        <!-- Кнопка магазина по центру -->
+        <div id="shop-btn" class="centered">
             <img src="https://tl.vhv.rs/dpng/s/471-4713538_red-buy-now-buttons-hd-png-download.png" alt="Shop Button" class="shop-img">
         </div>
     </section>
@@ -50,17 +46,7 @@
                 <div class="shop-item">Improvement 2 (Cost: 150)</div>
                 <div class="shop-item">Improvement 3 (Cost: 200)</div>
                 <div class="shop-item">Improvement 4 (Cost: 250)</div>
-                <div class="shop-item">Improvement 5 (Cost: 300)</div>
-                <div class="shop-item">Improvement 6 (Cost: 350)</div>
-                <div class="shop-item">Improvement 7 (Cost: 400)</div>
-                <div class="shop-item">Improvement 8 (Cost: 450)</div>
-                <div class="shop-item">Improvement 9 (Cost: 500)</div>
-                <div class="shop-item">Improvement 10 (Cost: 550)</div>
-                <div class="shop-item">Improvement 11 (Cost: 600)</div>
-                <div class="shop-item">Improvement 12 (Cost: 650)</div>
-                <div class="shop-item">Improvement 13 (Cost: 700)</div>
-                <div class="shop-item">Improvement 14 (Cost: 750)</div>
-                <div class="shop-item">Improvement 15 (Cost: 800)</div>
+                <!-- Добавить остальные улучшения -->
             </div>
         </div>
     </div>
@@ -72,4 +58,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
