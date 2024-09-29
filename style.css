@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: url('https://cdn.pixabay.com/photo/2018/07/28/10/30/landscape-3564149_1280.png') no-repeat center center fixed;
+    background: url('https://i.imgur.com/aH5Pyzr.png') no-repeat center center fixed; /* Пиксельный фон */
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -68,12 +68,14 @@ h1, h2 {
 }
 
 .game-btn {
-    padding: 15px 30px;
+    padding: 15px;
     font-size: 1.5rem;
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 50%; /* Круглая кнопка */
+    width: 100px;
+    height: 100px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
@@ -83,18 +85,20 @@ h1, h2 {
 }
 
 .game-btn:active {
-    transform: scale(0.95);
+    transform: scale(0.95); /* Анимация нажатия кнопки */
 }
 
 .shop-btn {
-    display: block;
-    margin: 10px 0;
-    padding: 10px 20px;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 15px;
     font-size: 1.2rem;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%; /* Круглая кнопка */
+    width: 80px;
+    height: 80px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
