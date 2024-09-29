@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate Clicker Game</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -26,13 +25,13 @@
         </div>
 
         <!-- Кнопка клика (монета) по центру -->
-        <div id="click-btn" class="centered">
+        <div id="click-btn" class="click-centered">
             <img src="https://w7.pngwing.com/pngs/256/527/png-transparent-game-coin-thumbnail.png" alt="Click Image" class="click-img">
         </div>
 
-        <!-- Кнопка магазина по центру -->
-        <div id="shop-btn" class="centered">
-            <img src="https://tl.vhv.rs/dpng/s/471-4713538_red-buy-now-buttons-hd-png-download.png" alt="Shop Button" class="shop-img">
+        <!-- Кнопка магазина -->
+        <div id="shop-btn" class="shop-centered">
+            <button class="shop-btn">Shop</button>
         </div>
     </section>
 
@@ -51,9 +50,7 @@
         </div>
     </div>
 
-    <!-- Аудио для клика и фоновой музыки -->
     <audio id="click-sound" src="https://freesound.org/people/cdrk/sounds/502334/download/502334__cdrk__button-click.wav" preload="auto"></audio>
-    <audio id="background-music" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto" loop></audio>
 
     <script src="script.js"></script>
 </body>
