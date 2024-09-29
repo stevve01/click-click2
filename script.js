@@ -28,6 +28,20 @@ document.getElementById('click-btn').addEventListener('click', function() {
     checkLevelUp();
 });
 
+// Открытие магазина
+const shopBtn = document.getElementById('shop-btn');
+const shopModal = document.getElementById('shop-modal');
+const closeShop = document.querySelector('.close');
+
+shopBtn.addEventListener('click', function() {
+    shopModal.style.display = 'flex';
+});
+
+// Закрытие магазина
+closeShop.addEventListener('click', function() {
+    shopModal.style.display = 'none';
+});
+
 // Проверка на повышение уровня
 function checkLevelUp() {
     if (score >= goal) {
@@ -37,32 +51,6 @@ function checkLevelUp() {
         updateScore();
     }
 }
-
-// Покупка авто-кликера
-document.getElementById('auto-clicker').addEventListener('click', function() {
-    if (score >= 50 && !autoClickerActive) {
-        score -= 50;
-        updateScore();
-        autoClickerActive = true;
-        localStorage.setItem('autoClickerActive', 'true');
-        startAutoClicker();
-        this.innerText = 'Auto-Clicker Active';
-        this.disabled = true;
-    }
-});
-
-// Покупка ускоренного авто-кликера
-document.getElementById('fast-clicker').addEventListener('click', function() {
-    if (score >= 500 && !fastClickerActive) {
-        score -= 500;
-        updateScore();
-        fastClickerActive = true;
-        localStorage.setItem('fastClickerActive', 'true');
-        startFastClicker();
-        this.innerText = 'Fast Clicker Active';
-        this.disabled = true;
-    }
-});
 
 // Воспроизведение фоновой музыки
 const backgroundMusic = document.getElementById('background-music');
@@ -80,35 +68,3 @@ function openModal(message) {
 document.querySelector('.close').addEventListener('click', function() {
     document.getElementById('modal').style.display = 'none';
 });
-
-// Авто-кликер
-function startAutoClicker() {
-    setInterval(function() {
-        score++;
-        updateScore();
-        checkLevelUp();
-    }, 1000); // Один клик каждую секунду
-}
-
-// Ускоренный авто-кликер
-function startFastClicker() {
-    setInterval(function() {
-        score += 2;
-        updateScore();
-        checkLevelUp();
-    }, 500); // Два клика каждую полсекунды
-}
-
-// Обновление статистики
-function updateStats() {
-    document.getElementById('total-clicks').innerText = `Total Clicks: ${totalClicks}`;
-    document.getElementById('play-time').innerText = `Time Played: ${playTime} seconds`;
-    playTime++;
-    setTimeout(updateStats, 1000);
-}
-
-// Запуск игры
-updateScore();
-updateStats();
-if (autoClickerActive) startAutoClicker();
-if (fastClickerActive) startFastClicker();
