@@ -56,29 +56,45 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Центрирование кнопок "Клик" и "Магазин" */
-.centered {
+/* Центрирование кнопки клика */
+.click-centered {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px auto;
 }
 
-#click-btn img, #shop-btn img {
+#click-btn img {
     width: 150px;
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
-#click-btn:hover img, #shop-btn:hover img {
+#click-btn:hover img {
     transform: scale(1.1);
 }
 
 /* Кнопка магазина */
-.shop-img {
-    width: 200px;
-    height: auto;
+.shop-centered {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.shop-btn {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.shop-btn:hover {
+    background-color: #218838;
 }
 
 /* Модальное окно магазина */
@@ -143,12 +159,13 @@ h1 {
         font-size: 1.2rem;
     }
 
-    #click-btn img, #shop-btn img {
+    #click-btn img {
         width: 120px;
     }
 
-    .shop-img {
-        width: 150px;
+    .shop-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 
     h1 {
