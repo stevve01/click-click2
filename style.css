@@ -1,54 +1,61 @@
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background: url('https://avatars.mds.yandex.net/i?id=f9ce3862325f61dab82f4cac08c4d17cfcf446b2-9042494-images-thumbs&n=13') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
-
-header {
-    background-color: #333;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.logo {
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-/* HUD (интерфейс) */
-.hud {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 600px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    margin-bottom: 20px;
+.chat-container {
+    width: 400px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
-.hud-item {
-    color: white;
-    font-size: 1.5rem;
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.game-section {
-    padding: 50px 20px;
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
+.user-message {
+    text-align: right;
+    margin: 5px 0;
+}
+
+.bot-message {
+    text-align: left;
+    margin: 5px 0;
+}
+
+form {
+    display: flex;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
 }
 
 h1 {
