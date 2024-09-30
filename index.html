@@ -1,58 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Clicker Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Чат с ИИ-ботом</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">ClickerGame</div>
-        </nav>
-    </header>
-
-    <!-- Главная секция игры -->
-    <section id="game" class="game-section">
-        <h1>Ultimate Clicker Game</h1>
-
-        <!-- HUD с уровнями и очками -->
-        <div id="hud" class="hud">
-            <div id="level" class="hud-item">Level: 1</div>
-            <div id="goal" class="hud-item">Goal: 100 points</div>
-            <div id="score" class="hud-item">Score: 0</div>
-        </div>
-
-        <!-- Кнопка клика (монета) по центру -->
-        <div id="click-btn" class="click-centered">
-            <img src="https://w7.pngwing.com/pngs/256/527/png-transparent-game-coin-thumbnail.png" alt="Click Image" class="click-img">
-        </div>
-
-        <!-- Кнопка магазина -->
-        <div id="shop-btn" class="shop-centered">
-            <button class="shop-btn">Shop</button>
-        </div>
-    </section>
-
-    <!-- Окно магазина -->
-    <div id="shop-modal" class="modal">
-        <div class="modal-content shop-content">
-            <span class="close">&times;</span>
-            <h2>Shop</h2>
-            <div class="shop-items">
-                <div class="shop-item">Improvement 1 (Cost: 100)</div>
-                <div class="shop-item">Improvement 2 (Cost: 150)</div>
-                <div class="shop-item">Improvement 3 (Cost: 200)</div>
-                <div class="shop-item">Improvement 4 (Cost: 250)</div>
-                <!-- Добавить остальные улучшения -->
-            </div>
-        </div>
+    <div class="chat-container">
+        <h1>Чат с ИИ-ботом</h1>
+        <div id="chat-box" class="chat-box"></div>
+        <form id="chat-form">
+            <input type="text" id="user-input" placeholder="Введите ваше сообщение..." required />
+            <button type="submit">Отправить</button>
+        </form>
     </div>
-
-    <!-- Аудио для клика -->
-    <audio id="click-sound" src="https://freesound.org/people/cdrk/sounds/502334/download/502334__cdrk__button-click.wav" preload="auto"></audio>
-
     <script src="script.js"></script>
 </body>
 </html>
+
